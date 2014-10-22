@@ -3,20 +3,34 @@
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
 
 // Custom Styles
+body {
+  font-family: 'Lato', sans-serif;
+}
+
 .maing {
   @include outer-container;
-  border-radius: 10px;
+  border-radius: 7px;
   background-color: #32C1F6;
+  position: relative;
+  top: 20px;
+  padding: 10px;
   .user-input {
     @include span-columns(6);
-    border-radius: 10px;
-    background-color: #959595;
+    border-radius: 7px;
+    background-color: #bdc3c7;
+    padding: 10px;
   }
   .user-output {
     @include span-columns(6);
-    border-radius: 10px;
-    background-color: #ECF0F1;
+    border-radius: 7px;
+    background-color: #ecf0f1;
+    padding: 10px;
   }
 }
 
-
+input, textarea {
+  border: 2px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 4px 4px 6px 1px #272822;
+}
