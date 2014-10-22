@@ -25,25 +25,30 @@
 <body>
 
 	<div class="maing">
+
 		<section class="user-input">
 			<h1>Title:</h1>
-			<input type="text" name="" value="" placeholder="Type the title here...">
+			<input type="text" class="field" name="title" placeholder="Enter your title here...">
 			<h1>Post:</h1>
-			<textarea type="text" rows="10" cols="40" name="" value="" placeholder="Type your post here...">
+			<textarea type="text" rows="10" cols="40" class="field" name="postBody" placeholder="Type your blog post here...">
 			</textarea>
+			<input type="submit" class="preview-button" value="Preview Your Post -->">
 		</section>
 
 		<section class="user-output">
-			<h2>Blog Post Preview:</h2>
-			<div></div>
+			<h3>BlizzyBlog Post Preview:</h3>
+			<div class="post-target"></div>
 		</section>
+
 	</div>
 
-	<!-- start templates -->
-
-
-
-	<!-- end templates -->
+	<script type="text/template" class="post-template">
+		<div>      
+      <h1><%= title %></h1>
+      <p><%= postBody %></p>
+      <hr>
+    </div>
+  </script>
 
 	<!-- build:js scripts/vendor.js -->
 	<!-- bower:js -->
