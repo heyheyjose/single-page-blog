@@ -1,5 +1,5 @@
 var postTemplate = _.template($('.post-template').html());
-var apiURL = 'http://tiny-pizza-server.herokuapp.com/collections/jv-finally-damn';
+var apiURL = 'https://tiny-pizza-server.herokuapp.com/collections/jv-finally-damn';
 
 var Post = function (attributes) { // constructor function
   return _.extend({
