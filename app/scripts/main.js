@@ -1,10 +1,19 @@
 var postTemplate = _.template($('.post-template').html());
 var apiURL = 'http://tiny-pizza-server.herokuapp.com/collections/jv-finally-damn';
 
-$('input[type=submit]').on('click', function (event) {
+var Post = function (attributes) { // constructor function
+  return _.extend({
+    title: 'no title',
+    postBody: 'none',
+    date: new Date()
+  }, attributes);
+};
+
+
+$('.preview-button').on('click', function (event) {
   event.preventDefault();
   var fieldValues = $('.field').serializeArray();
-  var dataObj = {};
+  var dataObj = new Post();
 
   fieldValues.forEach(function (field) {
     dataObj[field.name] = field.value;
@@ -29,17 +38,14 @@ setInterval(function () {
     if(allPosts.length > previousCount) {
       previousCount = allPosts.length;
 
-      var finishedTemplate = _.map(allPosts, function (post) {
-        if (_.isUndefined(post.title)) {
-          post.title = '';
-        }
-        if (_.isUndefined(post.postBody)) {
-          post.postBody = '';
-        }
-        return postTemplate(post);
+      var finishedTemplates = _.map(allPosts, function (postData) {
+        return postTemplate(new Post(postData));
       });
 
-      $('.post-target').html(finishedTemplate);
+      console.log(finishedTemplates); // plural vs singular
+
+      $('.post-target').html(_.first(finishedTemplates)); /* the _.first underscore method is what causes the most
+      recent post to always show up */
     }
   })
 }, 500);

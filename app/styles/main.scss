@@ -10,7 +10,7 @@ body {
 .maing {
   @include outer-container;
   border-radius: 7px;
-  background-color: #0000FF;
+  background-color: #34495E;
   position: relative;
   top: 20px;
   padding: 10px;
@@ -28,19 +28,50 @@ body {
   }
 }
 
-input, textarea {
+.post-target {
+  font-family: "Raleway", sans-serif;
+}
+
+input {
   border: 2px;
   padding: 10px;
   border-radius: 5px;
   box-shadow: 4px 4px 6px 1px #272822;
 }
 
-input[type="submit"] {
+textarea {
+  width: 100%;
+  height: 300px;
+  border: 2px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 4px 4px 6px 1px #272822;
+}
+
+// input[type="submit"] {
+//   background-color: #f1c40f;
+//   margin-top: 20px;
+//   display: block;
+// }
+
+.preview-button {
   background-color: #f1c40f;
+  margin-top: 20px;
+  display: block;
+}
+
+.publish-button {
+  background-color: #27ae60;
+  margin-top: 20px;
+  display: block;
 }
 
 img {
   width: 30%;
   height: 30%;
   float: right;
+}
+
+date {
+  color: #BDC3C7;
 }
