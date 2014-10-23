@@ -42,7 +42,7 @@ setInterval(function () {
         return postTemplate(new Post(postData));
       });
 
-      console.log(finishedTemplates); // plural vs singular
+      // console.log(finishedTemplates); // plural vs singular
 
       $('.post-target').html(_.first(finishedTemplates)); /* the _.first underscore method is what causes the most
       recent post to always show up */
