@@ -1,10 +1,10 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js">
 <head>
 	<meta charset="utf-8">
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
-	<title>BlizzyBlog</title>
+	<title>New Post</title>
 	<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -33,25 +33,25 @@
 			<input type="text" class="field" name="title" placeholder="Enter your title here...">
 			<h1>Post:</h1>
 			<textarea class="field" rows="12" cols="40" name="postBody" placeholder="Enter your post here..."></textarea>
-			<input type="submit" class="preview-button" value="Preview Your Post -->">
+			<input type="submit" class="preview-button" value="Preview Your Post">
 		</section>
 
 		<section class="user-output">
-			<h1>BlizzyBlog Post Preview:</h1>
+			<h1>Post Preview:</h1>
 			<div class="post-target"></div>
-			<input type="submit" class="publish-button" value="Publish Your Post -->">
+			<input type="submit" class="publish-button" value="Publish Your Post">
 		</section>
 
 	</div>
 
 	<script type="text/template" class="post-template">
-		<div>      
-      <h2><%= title %></h2>
-      <p><%= postBody %></p>
-      <date><%= date %></date>
-      <hr>
-    </div>
-  </script>
+	<div>
+		<h2><%= title %></h2>
+		<p><%= postBody %></p>
+		<date><%= date %></date>
+		<hr>
+	</div>
+	</script>
 
 	<!-- build:js scripts/vendor.js -->
 	<!-- bower:js -->

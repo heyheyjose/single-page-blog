@@ -48,22 +48,24 @@ textarea {
   box-shadow: 4px 4px 6px 1px #272822;
 }
 
-// input[type="submit"] {
-//   background-color: #f1c40f;
-//   margin-top: 20px;
-//   display: block;
-// }
-
 .preview-button {
   background-color: #f1c40f;
   margin-top: 20px;
   display: block;
+  &:hover {
+    background-color: #f39c12;
+    transition: background-color 0.2s;
+  }
 }
 
 .publish-button {
-  background-color: #27ae60;
+  background-color: #2ecc71;
   margin-top: 20px;
   display: block;
+  &:hover {
+    background-color: #27ae60;
+    transition: background-color 0.2s;
+  }
 }
 
 img {
